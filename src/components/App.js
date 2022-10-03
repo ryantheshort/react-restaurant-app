@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import './App.css';
-import LogoContainer from './LogoImage';
+import LogoFeatured from './LogoImage';
 
 
 function App() {
   return (
-    <div className="page-container">
+    <main className="page-container">
+      <nav>
+
+      </nav>
       <div className="app-container">
-      <LogoContainer />
+        <LogoFeatured />
       <>Menu Items Will Go Here</>
       <>Food Type Items Will Go Here</>
       <>Order Cart Here</>
@@ -18,7 +21,7 @@ function App() {
 
 
       </div>
-    </div>
+    </main>
   );
 }
 

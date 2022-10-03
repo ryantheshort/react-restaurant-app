@@ -1,25 +1,24 @@
-import { useState } from "react";
-import Container from 'react-bootstrap/Container';
+import Carousel from "react-bootstrap/Carousel";
 
  
 
-function LogoContainer() {
-    
-    
-    
-  
+function LogoFeatured() {
     
     return (
-        
-            <Container className="col-12">
-                 <img src={"./Images/vicspizza.png"} className="img-fluid"/>
-            </Container>
+        <Carousel className="carousel">
+            <Carousel.Item>
+                <img
+                    className="d-block w-100 carousel-image"
+                    src="./Images/vicspizza.png"
+                    alt="First Slide"
+                />   
+            </Carousel.Item>
 
-        
-    )
+        </Carousel>
+            
 
 
-
+    );
 };
 
-export default LogoContainer;
+export default LogoFeatured;

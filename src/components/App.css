@@ -1,0 +1,13 @@
+main {
+    background-color: #003c3b;
+}
+.app-container {
+    width: 90%;
+    margin: auto;
+    background-color: #c10000;
+}
+.carousel-image {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
