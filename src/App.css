@@ -1,38 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body, html {
+  margin: 10px;
+  padding: 0;
+  height: 100%;
+  background-image: url(./components/Images/tableandcloth.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: white;
+  margin: 0;
+}
+.logo {
+  background-image: url(./components/Images/shortsslices.png);
+  height: 275px;
+  width: 450px;
+  background-position: center;
+  background-size: contain;
+}
+h1 {
+  margin: 15px 0;
+  padding: 5px 15px;
+  font-size: 55px;
+  color: #f4eeee;
+  font-family: 'Pacifico';
+  background-color: transparent;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.hover:hover {
+  background-color: #646363;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about {
+  height: 100%;
+  width: 85%;
+  background-color: transparent;
+  color: #eb3a2e;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  
+}
+
+h3 {
+  margin-top: 15px;
+  font-size: 25px;
+  text-align: center;
+}
+
+p {
+  font-size: 30px;
+  text-align:left;
+  padding: 8px 25px;
+  margin: 0;
+  letter-spacing: .5px;
+}
+/*
+====    NAV   and   SOCIAL  BAR  ===== */
+.nav-bar {
+  display: flex;
+  list-style: none;
+  
+}
+.nav-bar li {
+  margin-right: 10px;
+}
+.nav-bar button {
+  font-size: 20px;
+  padding: 5px 15px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.social-bar {
+  display: flex;
+  list-style: none;
+  margin-right: 50px;
+}
+.social-bar li {
+  margin-right: 30px;
+  font-size: 28px;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.fb {
+  background-color: #4e6baf;
+  color: #ffffff;
+  cursor: pointer;
+}
+.ig {
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  color: #ffffff;
+  cursor: pointer;
+}
+.tw {
+  background-color: #157ab4;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.name-box {
+  width: 100%;
+}
+.review-box {
+  width: 100%;
+}
+.submit-btn {
+  background-color: #000000;
+  border: none;
+}
+.review-list {
+  margin-top: 10px;
+  border: 2px solid #000000;
+  padding: 10px;
+  background-color: #000000;
+  border-radius: 7px;
+  color: #ffffff;
+  list-style: none;
+}
+
+/*
+MENU LIST  */
+.menuArea {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-menu {
+  width: 60%;
+  padding: 10px;
+  
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  border: none;
+}
+.menu-card {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: none;
+}
+.card-content {
+  display: flex;
+  flex-direction: row;
+}
+.menu-image {
+  width: 30%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-top-right-radius: 0;
+}
+.card-body {
+  color: #ffffff;
+  background-color: #000000;
+}
+.card-footer {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.menu-order {
+  display: flex;
+}
+
+
+/* =        MENU LIST   ORDER FORM   */
+
+.order-form {
+  margin-left: auto;
+  margin-right: auto;
+}
+.order {
+  height: 100%;
+  width: 400px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start; */
+}
+.order-btn {
+  background-color: #646363;
+  border: none;
+  border-radius: 0%;
+}
+
+.nav-item {
+  color: #ffffff;
+  background-color: #000000;
+}
+.complete-order-btn {
+  margin-left: 55px;
 }
