@@ -15,13 +15,6 @@ function Menu({ menuItems, ...props }) {
     .filter((item) => filter ? item.type === filter : item)
     .map((item) => <MenuList key={item.id} item={item} updateOrder={props.updateOrder} />);
 
-    // const updateOrder = (id) => {
-    //   const index = menuItems.findIndex((item) => item.id === id);
-    //   const newOrderItem = menuItems[index];
-    //   setOrder([...order, newOrderItem]);
-    // };
-
-
   return (
     <div className="menu-order">
       <section className="main-menu">
