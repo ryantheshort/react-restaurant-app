@@ -5,7 +5,7 @@ import OrderForm from "../OrderForm/OrderForm";
 
 function Menu({ menuItems, ...props }) {
     const [filter, setFilter] = useState()
-    const [order, setOrder] = useState([]);
+   
 
     const updateFilter = (value) => {
         setFilter(value);
@@ -23,7 +23,7 @@ function Menu({ menuItems, ...props }) {
       </section>
       <section className="order-form">
         {/* <OrderForm  /> */}
-        <OrderForm order={order} />
+        <OrderForm order={props.order} />
       </section>
     </div>
   );

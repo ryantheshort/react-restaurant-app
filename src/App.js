@@ -32,7 +32,7 @@ const INITIAL_MENU_LIST = [
     name: "Supreme Pizza",
     image: "https://dalspizzagvl.com/wp-content/uploads/2021/10/item-1f3f9737-c08b-4a60-8897-77f4d088b8c7.jpg",
     description: "Mozzarella, pepperoni, Italian sausage, green peppers, red onions.",
-    price: 17.5,
+    price: 17.50,
     type: "pizza",
     id: nanoid(),
   },
@@ -143,11 +143,10 @@ function App() {
   const [menuItems, setMenuItems] = useState(INITIAL_MENU_LIST);
   const [order, setOrder] = useState([]);
 
-  // const updateOrder = (id) => {
-  //   const index = menuItems.findIndex((item) => item.id === id);
-  //   const newOrderItem = menuItems[index];
-  //   setOrder([...order, newOrderItem]);
-  // };
+  const updateOrder = (newOrderItem) => {
+    console.log('new order item', newOrderItem)
+    setOrder([...order, newOrderItem]);
+  };
 
   return (
     <div className="App"> 
@@ -182,7 +181,7 @@ function App() {
         </nav>
       </section>
         {selection === "a" && <Home />}
-        {selection === "b" && <Menu menuItems={menuItems} order={order}  />}
+        {selection === "b" && <Menu menuItems={menuItems} order={order}  updateOrder={updateOrder} />}
         {/* {selection === "c" && <OrderForm order={order} />} */}
         {selection === "c" && <Reviews />}
     </div>
