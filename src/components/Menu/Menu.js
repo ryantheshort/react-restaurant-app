@@ -23,7 +23,7 @@ function Menu({ menuItems, ...props }) {
       </section>
       <section className="order-form">
         {/* <OrderForm  /> */}
-        <OrderForm order={props.order} />
+        <OrderForm order={props.order} addOrder={props.addOrder}/>
       </section>
     </div>
   );

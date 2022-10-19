@@ -28,10 +28,10 @@ function OrderForm({ order, addOrder, resetOrder }) {
   }
 
   const handleSubmit = () => {
-    addOrder(order, name, phone);
+    addOrder(name, phone);
     setName("");
     setPhone("");
-    resetOrder();
+    
   };
 
   const orderList = order.map((orderItem) => (

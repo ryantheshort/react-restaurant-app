@@ -148,6 +148,26 @@ function App() {
     setOrder([...order, newOrderItem]);
   };
 
+  const addOrder = (name, phone) => {
+    console.log(name);
+    console.log(phone);
+
+    const orders = JSON.parse(localStorage.getItem('shortsSlicesOrders')) || [];
+    const customerOrder = {
+      name, 
+      phone,
+      order, 
+    }
+
+    orders.push(customerOrder);
+    localStorage.setItem('shortsSlicesOrders', JSON.stringify(orders));
+    
+    setOrder([]);
+
+
+
+  }
+
   // const addOrder =  Add methods here justlikee used on line 146 to allow them to pass thru props.
 
   // const resetOrder =
@@ -185,7 +205,7 @@ function App() {
         </nav>
       </section>
         {selection === "a" && <Home />}
-        {selection === "b" && <Menu menuItems={menuItems} order={order}  updateOrder={updateOrder} />}
+        {selection === "b" && <Menu menuItems={menuItems} order={order}  updateOrder={updateOrder} addOrder={addOrder} />}
         {selection === "c" && <OrderForm order={order} />}
         {selection === "c" && <Reviews />}
     </div>
