@@ -7,7 +7,7 @@ import { nanoid } from "nanoid";
 import { useState } from "react";
 import Home from './components/Home/Home';
 import Menu from './components/Menu/Menu';
-// import OrderForm from './components/OrderForm/OrderForm';
+import OrderForm from './components/OrderForm/OrderForm';
 import Reviews from './components/Reviews/Reviews';
 
 
@@ -148,6 +148,10 @@ function App() {
     setOrder([...order, newOrderItem]);
   };
 
+  // const addOrder =  Add methods here justlikee used on line 146 to allow them to pass thru props.
+
+  // const resetOrder =
+
   return (
     <div className="App"> 
     <div className='logo'></div>
@@ -182,7 +186,7 @@ function App() {
       </section>
         {selection === "a" && <Home />}
         {selection === "b" && <Menu menuItems={menuItems} order={order}  updateOrder={updateOrder} />}
-        {/* {selection === "c" && <OrderForm order={order} />} */}
+        {selection === "c" && <OrderForm order={order} />}
         {selection === "c" && <Reviews />}
     </div>
   );
